@@ -21,7 +21,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: mpm i
+      - run: npm i
       - restore_cache:
           keys: 
           - "npm_packages"
