@@ -25,6 +25,10 @@ jobs:
     steps:
       - checkout
       - run: npm audit
+      - run:
+          name: on error
+          command: echo "The job has been failed. Please take care of it!!"
+          when: on_fail
 
 workflows:
   Create_a_CI_Pipeline:
