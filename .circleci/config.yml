@@ -24,5 +24,9 @@ workflows:
   Create_a_CI_Pipeline:
     jobs:
       - build
-      - test
-      - analyze
+      - test:
+          requires:
+            - build
+      - analyze:
+          requires:
+            - test
